@@ -1,0 +1,10 @@
+ {% load static get_frontend_property_detail_url %} 
+
+From: "{{ email_property_management.name }}"
+Email: "{{ email_property_management.email }}"
+Message: "{{ email_property_management.message }}"
+
+------------------------------------------------------------
+Click this link to Unsubscibe to this custom saved search ({{ activate_url }}) or 
+Want to Unsubscibe to all emails? Click this link ({{ activate_url }}) 
+

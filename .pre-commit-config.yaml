@@ -1,0 +1,14 @@
+repos:
+  - repo: https://github.com/psf/black
+    rev: 20.8b1 # Replace by any tag/version: https://github.com/psf/black/tags
+    hooks:
+      - id: black
+        language_version: python3 # Should be a command that runs python3.6+
+  - repo: https://gitlab.com/pycqa/flake8
+    rev: 3.8.3
+    hooks:
+      - id: flake8
+  - repo: https://github.com/PyCQA/isort
+    rev: 4.3.21  # Use the revision sha / tag you want to point at
+    hooks:
+      - id: isort

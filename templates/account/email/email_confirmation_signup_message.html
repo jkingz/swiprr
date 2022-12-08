@@ -1,0 +1,90 @@
+<!-- NOTE: As much as possible use inline styling! Different email clients have various css supports, E.g: Some email client does not support
+    Internal css styling and some do
+ -->
+
+ {% load static %}
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Email Confirmation Signup</title>
+</head>
+<body style="-moz-box-sizing:border-box;-ms-text-size-adjust:100%;-webkit-box-sizing:border-box;-webkit-text-size-adjust:100%;Margin:0;background:#F3F3F3!important;box-sizing:border-box;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;min-width:100%;padding:0;text-align:left;width:100%!important">
+    <table align="center" height="100%" width="100%">
+        <tbody>
+            <tr>
+                <td align="center">
+                    <table height="100%" width="700" style="padding: 30px;background:#FFFFFF!important; border-radius: 8px;">
+                        <tbody>
+                            <tr>
+                                <td align="center">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td align="center" width="100%" style="padding-top:0px;">
+                                    <p style="margin-bottom: 0px; margin-top: 0px;font-size: 38px;">Welcome</p>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <table style="border-spacing:0!important;border-collapse:collapse!important;margin:0 auto!important;table-layout:auto" width="100%">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <hr>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center" style="font-size:25px;text-align:center;font-weight:820; padding-top:10px;">Email Verification</td>
+                            </tr>
+                            <tr>
+                                <td align="center" style="font-size:19px;line-height:30px;text-align:center; padding-top:0px">
+                                    You recently registered (<a class="text-decoration: none; color: #0a0a0a;">{{ email }}</a>) as your primary email address on test.com.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td align="center" style="font-size:19px;line-height:30px;text-align:center; padding-bottom: 10px;">
+                                    To verify this email address belongs to you please click the link below.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td align="center" style="padding:0px; padding-bottom: 5px;">
+                                    <div>
+                                        <a align="center"
+                                            href="{{ activate_url }}"
+                                            style="background-color:#FAC005; display:inline-block; border-radius:10px;color:#ffffff;font-size:19px;line-height:40px;text-align:center;text-decoration:none;width:180px;">
+                                            Confirm
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding-top:0px;">
+                                    <hr>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center" style="font-size:12px;text-align:center;padding-top:0px;margin-top:0px;">
+                                    <p style="margin-top: 5px;font-size:12px;">
+                                        Real Estate in a Flash.
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

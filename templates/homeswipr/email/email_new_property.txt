@@ -1,0 +1,20 @@
+ {% load static get_frontend_property_detail_url %} 
+
+ [Homeswiper]
+PICKED FOR YOU
+
+Based on your custom search: "{{ saved_search.title }}"
+{% for property in to_email_properties %} {% with property.Photos.all|first as photo %} [Property Photo] {% endwith %} {{ PROPERTY.ADDRESS.ADDRESSLINE1 }}, {{ PROPERTY.ADDRESS.CITY }}, {{ PROPERTY.ADDRESS.PROVINCE }} 
+
+------------------------------------------------------------
+$ {{ PROPERTY.INFO.DECIMAL_PRICE }} 
+
+{% if property.Building.bedrooms_total %} {{ property.Building.bedrooms_total }} Bed/s {% else %} No Bed {% endif %} {% if property.Building.bathroom_total %} | {{ property.Building.bathroom_total }} Bathroom/s {% else %} | No Bathroom {% endif %} {% if property.Building.size_interior %} | {{ property.Building.size_interior }} {% endif %}
+
+------------------------------------------------------------
+More Details ({{ property.pk|get_frontend_property_detail_url }}) {% endfor %} 
+ View More Properties ({{ activate_url }}) 
+------------------------------------------------------------
+Click this link to Unsubscibe to this custom saved search ({{ activate_url }}) or 
+Want to Unsubscibe to all emails? Click this link ({{ activate_url }}) 
+

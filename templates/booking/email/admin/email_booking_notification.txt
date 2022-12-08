@@ -1,0 +1,177 @@
+{% load i18n %}
+{% autoescape off %}
+{% load static %}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+  <head>
+    <link href="http://fonts.googleapis.com/css?family=Roboto:400,300,500,100,100italic,300italic,400italic,500italic,700,700italic" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700,700italic,400italic,300italic" rel="stylesheet">
+    <style type="text/css">
+      @font-face {
+        font-family: 'Roboto Condensed';
+        font-style: normal;
+        font-weight: 300;
+        src: local('Roboto Condensed Light'), local('RobotoCondensed-Light'), url(http://fonts.gstatic.com/s/robotocondensed/v13/b9QBgL0iMZfDSpmcXcE8nL3QFSXBldIn45k5A7iXhnc.ttf) format('truetype');
+      }
+      @font-face {
+        font-family: 'Roboto Condensed';
+        font-style: normal;
+        font-weight: 400;
+        src: local('Roboto Condensed'), local('RobotoCondensed-Regular'), url(http://fonts.gstatic.com/s/robotocondensed/v13/Zd2E9abXLFGSr9G3YK2MsDR-eWpsHSw83BRsAQElGgc.ttf) format('truetype');
+      }
+      @font-face {
+        font-family: 'Roboto Condensed';
+        font-style: normal;
+        font-weight: 700;
+        src: local('Roboto Condensed Bold'), local('RobotoCondensed-Bold'), url(http://fonts.gstatic.com/s/robotocondensed/v13/b9QBgL0iMZfDSpmcXcE8nDokq8qT6AIiNJ07Vf_NrVA.ttf) format('truetype');
+      }
+      @font-face {
+        font-family: 'Roboto Condensed';
+        font-style: italic;
+        font-weight: 300;
+        src: local('Roboto Condensed Light Italic'), local('RobotoCondensed-LightItalic'), url(http://fonts.gstatic.com/s/robotocondensed/v13/mg0cGfGRUERshzBlvqxeAMgYS_4b_j8XZWrBSrn8QbY.ttf) format('truetype');
+      }
+      @font-face {
+        font-family: 'Roboto Condensed';
+        font-style: italic;
+        font-weight: 400;
+        src: local('Roboto Condensed Italic'), local('RobotoCondensed-Italic'), url(http://fonts.gstatic.com/s/robotocondensed/v13/BP5K8ZAJv9qEbmuFp8RpJdNyc1nIn01s4QPT2l20KA4.ttf) format('truetype');
+      }
+      @font-face {
+        font-family: 'Roboto Condensed';
+        font-style: italic;
+        font-weight: 700;
+        src: local('Roboto Condensed Bold Italic'), local('RobotoCondensed-BoldItalic'), url(http://fonts.gstatic.com/s/robotocondensed/v13/mg0cGfGRUERshzBlvqxeAIvse0WFWMXD6DWBLcV41iQ.ttf) format('truetype');
+      }
+      @font-face {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 100;
+        src: local('Roboto Thin'), local('Roboto-Thin'), url(http://fonts.gstatic.com/s/roboto/v15/Jzo62I39jc0gQRrbndN6nfesZW2xOQ-xsNqO47m55DA.ttf) format('truetype');
+      }
+      @font-face {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 300;
+        src: local('Roboto Light'), local('Roboto-Light'), url(http://fonts.gstatic.com/s/roboto/v15/Hgo13k-tfSpn0qi1SFdUfaCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
+      }
+      @font-face {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        src: local('Roboto'), local('Roboto-Regular'), url(http://fonts.gstatic.com/s/roboto/v15/zN7GBFwfMP4uA6AR0HCoLQ.ttf) format('truetype');
+      }
+      @font-face {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        src: local('Roboto Medium'), local('Roboto-Medium'), url(http://fonts.gstatic.com/s/roboto/v15/RxZJdnzeo3R5zSexge8UUaCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
+      }
+      @font-face {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        src: local('Roboto Bold'), local('Roboto-Bold'), url(http://fonts.gstatic.com/s/roboto/v15/d-6IYplOFocCacKzxwXSOKCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
+      }
+      @font-face {
+        font-family: 'Roboto';
+        font-style: italic;
+        font-weight: 100;
+        src: local('Roboto Thin Italic'), local('Roboto-ThinItalic'), url(http://fonts.gstatic.com/s/roboto/v15/12mE4jfMSBTmg-81EiS-YS3USBnSvpkopQaUR-2r7iU.ttf) format('truetype');
+      }
+      @font-face {
+        font-family: 'Roboto';
+        font-style: italic;
+        font-weight: 300;
+        src: local('Roboto Light Italic'), local('Roboto-LightItalic'), url(http://fonts.gstatic.com/s/roboto/v15/7m8l7TlFO-S3VkhHuR0at50EAVxt0G0biEntp43Qt6E.ttf) format('truetype');
+      }
+      @font-face {
+        font-family: 'Roboto';
+        font-style: italic;
+        font-weight: 400;
+        src: local('Roboto Italic'), local('Roboto-Italic'), url(http://fonts.gstatic.com/s/roboto/v15/W4wDsBUluyw0tK3tykhXEfesZW2xOQ-xsNqO47m55DA.ttf) format('truetype');
+      }
+      @font-face {
+        font-family: 'Roboto';
+        font-style: italic;
+        font-weight: 500;
+        src: local('Roboto Medium Italic'), local('Roboto-MediumItalic'), url(http://fonts.gstatic.com/s/roboto/v15/OLffGBTaF0XFOW1gnuHF0Z0EAVxt0G0biEntp43Qt6E.ttf) format('truetype');
+      }
+      @font-face {
+        font-family: 'Roboto';
+        font-style: italic;
+        font-weight: 700;
+        src: local('Roboto Bold Italic'), local('Roboto-BoldItalic'), url(http://fonts.gstatic.com/s/roboto/v15/t6Nd4cfPRhZP44Q5QAjcC50EAVxt0G0biEntp43Qt6E.ttf) format('truetype');
+      }
+    </style>
+  </head>
+  <body>
+    <table width="100%" style="background-color:rgb(231, 231, 231);padding:60px 25px;font-size: 14px; font-weight: 400; font-family: 'Open Sans', sans-serif;">
+      <tr>
+        <td align="center" valign="middle">
+          <table style="height:450px;width:640px;background-color:#FFF;box-shadow:0 0 3px 0 rgba(0, 0, 0, 0.3) !important">
+            <tr>
+              <td>
+                <table style="margin:40px">
+                  <tr>
+                    <td align="center" valign="top">
+                      <img align="
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <table style="margin-top:25px">
+                        <tr>
+                          <td valign="top">
+                            <table>
+                              <tr>
+                                <td>
+                                  <p style="color:#999999;font:300 16px 'Roboto', Helvetica, Arial, Sans-serif;line-height:150%;margin-bottom:25px;">
+                                    {% if email_type == "client_assignment" or email_type == "agent_assignment" %}
+                                    {{ message }} <b>{{ property_name }}</b>.
+                                    {% elif email_type == "confirmed_booking" %}
+                                      A new booking for <b>{{ property_name }}</b> {{ message }}.
+                                    {% else %}
+                                      Booking for <b>{{ property_name }}</b> {{ message }}.
+                                    {% endif %}
+                                    <a href="https://test.com/managebookings" style="text-decoration: none; color:#1652F0;"> You can view all bookings here.</a>
+                                  </p>
+                                  <p style="color:#999999;font:300 16px 'Roboto', Helvetica, Arial, Sans-serif;line-height:150%;margin-bottom:10px">
+                                    If you wish to view the property click the button below.
+                                  </p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center">
+                                  <a href="{{ property_url }}" style="text-decoration: none;">
+                                    <table bgcolor="{{ColorScheme}}" style="margin:10px 0 25px 0;background-color:#FAC005;height:40px;width:280px;text-align:center;border-radius: 3px;" cellpadding="0" cellspacing="8">
+                                      <tr>
+                                        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                        <td>
+                                          <span style="color:#FFF;font:18px 'Roboto Condensed', Helvetica, Arial, Sans-serif#view_updated_link">
+                                            View Property
+                                          </span>
+                                        </td>
+                                        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                      </tr>
+                                    </table>
+                                  </a>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
+{% endautoescape %}

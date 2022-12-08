@@ -1,0 +1,107 @@
+<!-- NOTE: As much as possible use inline styling! Different email clients have various css supports, E.g: Some email client does not support
+    Internal css styling and some do
+ -->
+
+ {% load static get_frontend_property_detail_url %}
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>New Saved Search Property</title>
+</head>
+<body style="-moz-box-sizing:border-box;-ms-text-size-adjust:100%;-webkit-box-sizing:border-box;-webkit-text-size-adjust:100%;Margin:0;background:#f3f3f3!important; box-sizing:border-box;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;min-width:100%;padding:0;text-align:left;width:100%!important">
+    <table align="center" height="100%" width="100%">
+        <tbody>
+            <tr>
+                <td align="center">
+                    <table height="100%" width="700" style="padding: 30px;background:#FFFFFF!important;border-radius: 75px">
+                        <tbody>
+                            <tr align="center">
+                                <td width="100%" colspan="2">
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:left; vertical-align: baseline; text">
+                                    <p style="font-size: 46px; padding-bottom: 0px; margin-bottom: 0px;"><strong>Picked For You</strong></p>
+                                    <p style="font-size: 15px; padding-top: 0px; margin-top: 0px;">Based on your custom search: "{{ saved_search.title }}"</p>
+                                </td>
+                            </tr>
+                            {% for property in to_email_properties %}
+                                <tr align="center">
+                                    <td style="padding-bottom: 30px;">
+                                        {% with  property.Photos.all|first as photo %}
+                                            <img align="center" src="{{ photo.media_url }}" alt="Property Photo" style="border-radius: 5%; max-height: 350px;" width="350">
+                                        {% endwith %}
+                                    </td>
+                                    <td style="font-size:16px;line-height:30px;text-align:center; padding-left:4px; padding-bottom: 30px;">
+                                        <strong>{{ property.Address.address_line1 }}, {{ property.Address.city }}, {{ property.Address.province }}</strong>
+                                        <br>
+                                        <hr width="75%" style="opacity: 25%; color: #d8d8d8;">
+                                        <strong>$ {{ property.Info.price }}</strong>
+                                        <br>
+                                        <p style="display: inline; color: black;">
+                                            {% if property.Building.bedrooms_total %}
+                                                {{ property.Building.bedrooms_total }} Bed(s)
+                                            {% else %}
+                                                No Bed
+                                            {% endif %}
+
+                                            {% if property.Building.bathroom_total %}
+                                                | {{ property.Building.bathroom_total }} Bathroom(s)
+                                            {% else %}
+                                                | No Bathroom
+                                            {% endif %}
+
+                                            {% if property.Building.size_interior %}
+                                                | {{ property.Building.size_interior }}
+                                            {% endif %}
+                                        </p>
+                                        <hr width="75%" style="opacity: 25%; color: #d8d8d8;">
+                                        <a align="center"
+                                            href="{{ property.pk|get_frontend_property_detail_url }}"
+                                            style="background-color:#FAC005; margin-top: 5px; display:inline-block; border-radius:10px;color:#ffffff;font-size:16px;line-height:40px;text-align:center;text-decoration:none;width:180px;">
+                                            More Details
+                                        </a>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+
+                            <tr>
+                                <td align="center" style="padding-top:0px; padding-bottom: 5px;"  colspan="2">
+                                    <div>
+                                        <a align="center"
+                                            href="{{ frontend_url }}"
+                                            style="display: inline-block; border-radius: 10px; color: white; font-size: 16px; line-height: 40px; text-align: center; text-decoration: none; width: 180px; background-color:#1652F0; ">
+                                            View More Properties
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td style="padding-top:0px;" colspan="2">
+                                    <hr style="opacity: 25%;" style="color: #d8d8d8;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center" style="font-size:12px;text-align:center;padding-top:0px;margin-top:0px;"  colspan="2">
+                                    <span align="center" style="margin-top: 5px;font-size:12px; color:gray;">
+                                        Click <a href="{{ activate_url }}" style="color:gray;">here</a> to unsubscribe from our email list.
+                                    </span>
+                                    <br>
+                                    <span align="center" style="margin-top: 5px;font-size:12px; color:gray;">
+                                        Click <a href="{{ activate_url }}" style="color:gray;">here</a> to unsubscribe from this search.
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

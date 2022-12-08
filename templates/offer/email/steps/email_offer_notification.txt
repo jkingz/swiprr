@@ -1,0 +1,358 @@
+{% load i18n %}
+{% autoescape off %}
+{% load static %}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+  <head>
+    <link href="http://fonts.googleapis.com/css?family=Roboto:400,300,500,100,100italic,300italic,400italic,500italic,700,700italic" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700,700italic,400italic,300italic" rel="stylesheet">
+    <style type="text/css">
+      @font-face {
+        font-family: 'Roboto Condensed';
+        font-style: normal;
+        font-weight: 300;
+        src: local('Roboto Condensed Light'), local('RobotoCondensed-Light'), url(http://fonts.gstatic.com/s/robotocondensed/v13/b9QBgL0iMZfDSpmcXcE8nL3QFSXBldIn45k5A7iXhnc.ttf) format('truetype');
+      }
+      @font-face {
+        font-family: 'Roboto Condensed';
+        font-style: normal;
+        font-weight: 400;
+        src: local('Roboto Condensed'), local('RobotoCondensed-Regular'), url(http://fonts.gstatic.com/s/robotocondensed/v13/Zd2E9abXLFGSr9G3YK2MsDR-eWpsHSw83BRsAQElGgc.ttf) format('truetype');
+      }
+      @font-face {
+        font-family: 'Roboto Condensed';
+        font-style: normal;
+        font-weight: 700;
+        src: local('Roboto Condensed Bold'), local('RobotoCondensed-Bold'), url(http://fonts.gstatic.com/s/robotocondensed/v13/b9QBgL0iMZfDSpmcXcE8nDokq8qT6AIiNJ07Vf_NrVA.ttf) format('truetype');
+      }
+      @font-face {
+        font-family: 'Roboto Condensed';
+        font-style: italic;
+        font-weight: 300;
+        src: local('Roboto Condensed Light Italic'), local('RobotoCondensed-LightItalic'), url(http://fonts.gstatic.com/s/robotocondensed/v13/mg0cGfGRUERshzBlvqxeAMgYS_4b_j8XZWrBSrn8QbY.ttf) format('truetype');
+      }
+      @font-face {
+        font-family: 'Roboto Condensed';
+        font-style: italic;
+        font-weight: 400;
+        src: local('Roboto Condensed Italic'), local('RobotoCondensed-Italic'), url(http://fonts.gstatic.com/s/robotocondensed/v13/BP5K8ZAJv9qEbmuFp8RpJdNyc1nIn01s4QPT2l20KA4.ttf) format('truetype');
+      }
+      @font-face {
+        font-family: 'Roboto Condensed';
+        font-style: italic;
+        font-weight: 700;
+        src: local('Roboto Condensed Bold Italic'), local('RobotoCondensed-BoldItalic'), url(http://fonts.gstatic.com/s/robotocondensed/v13/mg0cGfGRUERshzBlvqxeAIvse0WFWMXD6DWBLcV41iQ.ttf) format('truetype');
+      }
+      @font-face {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 100;
+        src: local('Roboto Thin'), local('Roboto-Thin'), url(http://fonts.gstatic.com/s/roboto/v15/Jzo62I39jc0gQRrbndN6nfesZW2xOQ-xsNqO47m55DA.ttf) format('truetype');
+      }
+      @font-face {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 300;
+        src: local('Roboto Light'), local('Roboto-Light'), url(http://fonts.gstatic.com/s/roboto/v15/Hgo13k-tfSpn0qi1SFdUfaCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
+      }
+      @font-face {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        src: local('Roboto'), local('Roboto-Regular'), url(http://fonts.gstatic.com/s/roboto/v15/zN7GBFwfMP4uA6AR0HCoLQ.ttf) format('truetype');
+      }
+      @font-face {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        src: local('Roboto Medium'), local('Roboto-Medium'), url(http://fonts.gstatic.com/s/roboto/v15/RxZJdnzeo3R5zSexge8UUaCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
+      }
+      @font-face {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        src: local('Roboto Bold'), local('Roboto-Bold'), url(http://fonts.gstatic.com/s/roboto/v15/d-6IYplOFocCacKzxwXSOKCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
+      }
+      @font-face {
+        font-family: 'Roboto';
+        font-style: italic;
+        font-weight: 100;
+        src: local('Roboto Thin Italic'), local('Roboto-ThinItalic'), url(http://fonts.gstatic.com/s/roboto/v15/12mE4jfMSBTmg-81EiS-YS3USBnSvpkopQaUR-2r7iU.ttf) format('truetype');
+      }
+      @font-face {
+        font-family: 'Roboto';
+        font-style: italic;
+        font-weight: 300;
+        src: local('Roboto Light Italic'), local('Roboto-LightItalic'), url(http://fonts.gstatic.com/s/roboto/v15/7m8l7TlFO-S3VkhHuR0at50EAVxt0G0biEntp43Qt6E.ttf) format('truetype');
+      }
+      @font-face {
+        font-family: 'Roboto';
+        font-style: italic;
+        font-weight: 400;
+        src: local('Roboto Italic'), local('Roboto-Italic'), url(http://fonts.gstatic.com/s/roboto/v15/W4wDsBUluyw0tK3tykhXEfesZW2xOQ-xsNqO47m55DA.ttf) format('truetype');
+      }
+      @font-face {
+        font-family: 'Roboto';
+        font-style: italic;
+        font-weight: 500;
+        src: local('Roboto Medium Italic'), local('Roboto-MediumItalic'), url(http://fonts.gstatic.com/s/roboto/v15/OLffGBTaF0XFOW1gnuHF0Z0EAVxt0G0biEntp43Qt6E.ttf) format('truetype');
+      }
+      @font-face {
+        font-family: 'Roboto';
+        font-style: italic;
+        font-weight: 700;
+        src: local('Roboto Bold Italic'), local('Roboto-BoldItalic'), url(http://fonts.gstatic.com/s/roboto/v15/t6Nd4cfPRhZP44Q5QAjcC50EAVxt0G0biEntp43Qt6E.ttf) format('truetype');
+      }
+
+      table.info {
+        border-collapse: collapse;
+        width: 100%;
+        color:#999999;
+        font:300 16px 'Roboto'
+      }
+
+      td.info, th.info {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+
+      tr.info:nth-child(even) {
+        background-color: #dddddd;
+      }
+    </style>
+  </head>
+  <body>
+    <table width="100%" style="background-color:rgb(231, 231, 231);padding:60px 25px;font-size: 14px; font-weight: 400; font-family: 'Open Sans', sans-serif;">
+      <tr>
+        <td align="center" valign="middle">
+          <table style="height:450px;width:640px;background-color:#FFF;box-shadow:0 0 3px 0 rgba(0, 0, 0, 0.3) !important">
+            <tr>
+              <td>
+                <table style="margin:40px">
+                  <tr>
+                    <td align="center" valign="top">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <table style="margin-top:25px">
+                        <tr>
+                          <td valign="top">
+                            <table>
+                              <tr>
+                                <td valign="top">
+                                  <p style="color:#999999;font:300 16px 'Roboto', Helvetica, Arial, Sans-serif;line-height:150%;margin-bottom:15px;color:#333333;font:600 18px 'Roboto Condensed', Helvetica, Arial, Sans-serif">
+                                    {% if user %}
+                                      Hello {{ user }},
+                                    {% else %}
+                                      Hello,
+                                    {% endif %}
+                                  </p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <p style="color:#999999;font:300 16px 'Roboto', Helvetica, Arial, Sans-serif;line-height:150%;margin-bottom:25px;">
+                                    The documents team is hard at work preparing the documents requested.
+                                    You can expect these within the next 30 minutes.
+                                    If you do not receive them within 30 minutes.
+                                    Please email back directly, and the team will follow you up.<br><br>
+
+                                    Also, all the next steps are listed below.<br><br>
+
+                                    Next Steps:<br><br>
+
+                                    <b>Step 1 | Provide Information (Completed)</b><br>
+                                    You have successfully completed this step.<br><br>
+
+                                    <b>Step 2 | Document Preparation</b><br>
+                                    Our documentation team will prepare the documents and send them for
+                                    review by email.<br><br>
+
+                                    You can expect these within 30 minutes. If you do not receive them in
+                                    30 minutes, please reply-all to this email thread.<br><br>
+
+                                    <b>Step 3 | Document Review</b><br>
+                                    Once the documents are prepared, we send them to you to review by
+                                    email. Please review them carefully. As the licensed real estate
+                                    professional, you are responsible to ensure that the documents are
+                                    correct, accurate and mistake-free as you would be responsible for any
+                                    errors.<br><br>
+
+                                    <b>Step 3 (A) | Revision Needed</b><br>
+                                    In the event a revision is needed, you have to reject the documents
+                                    and send a message to the team to revise the documents for you. Once
+                                    revised they will be sent to you for review. Please repeat this step
+                                    until the documents are correct and mistake-free.<br><br>
+
+                                    <b>Step 4 | Documents Approved / Signings</b><br>
+                                    Once the documents are approved, we send them to you and the client
+                                    for signing on your behalf. In the event a client has any questions,
+                                    they will be directed to you, the agent. If the client requests a
+                                    revision, return to Step 3 (A). If the documents are correct, the
+                                    client should sign the documents. Once the documents are signed they
+                                    will be sent to the Seller's agent on your behalf. You are responsible
+                                    to explain the documents to the clients to ensure they understand
+                                    what's going on.<br><br>
+
+                                    <b>Step 5 | Documents Sent to Seller's Agent</b><br>
+                                    After the documents are signed by you and the client, we send them to
+                                    the seller's agent via email and we CC you.<br><br>
+
+                                    <b>Step 6 | Negotiating the Deal</b><br>
+                                    As a licensed real estate professional, it is your responsibility to
+                                    negotiate with the clients and the other agent. Our document team WILL
+                                    NOT negotiate the deal for you. That being said, if you do need any
+                                    help with negotiations you can reach out to the Senior Sales Team for
+                                    further help and guidance. If you need any additional documents or
+                                    revisions, return to Step 3 (A).<br><br>
+
+                                    <b>Step 7 | Collapsed Deal</b><br>
+                                    In the event an agreement can't be made and the deal collapses you can
+                                    either extend the contract/draft a new contract to continue
+                                    negotiations or find the client a new property. For both of these you
+                                    will have to start at Step 3 (A).<br><br>
+
+                                    <b>Step 8 | Accepted Deal</b><br>
+                                    If a deal is accepted, you must send all the documents to the
+                                    documents team by either email in this email thread.<br><br>
+
+                                    <b>Step 9 | Deposits</b><br>
+                                    Once we receive the documents, we will send the clients the deposit
+                                    instructions. It will be your responsibility to ensure that the
+                                    deposit is collected and delivered in a timely manner. For maximum
+                                    customer service, we require each agent to collect and deliver the
+                                    deposit funds to the Seller's brokerage, instead of making the Buyer
+                                    do this.<br><br>
+
+                                    <b>Information's Provided:</b><br><br>
+                                    {% if agent_name %}<b>Agent Name:</b> {{ agent_name }}<br>{% endif %}
+                                    {% if agent_email %}<b>Agent Email:</b> {{ agent_email }}<br>{% endif %}
+                                    {% if representing %}<b> Representing:</b> {{ representing }}<br><br>{% endif %}
+
+                                    {% if clients %}
+                                      <table class="info">
+                                        <tr class="info">
+                                          <th class="info">{{ representing }} Name:</th>
+                                        </tr>
+                                        {% for client in clients %}
+                                          {% if client.client.first_name or client.client.last_name %}
+                                            <tr class="info">
+                                              <td class="info">{{ client.client.first_name }} {{ client.client.last_name }}</td>
+                                            </tr>
+                                          {% else %}
+                                            <tr class="info">
+                                              <td class="info">{{ client.first_name }} {{ client.last_name }}</td>
+                                            </tr>
+                                          {% endif %}
+                                        {% endfor %}
+                                      </table><br>
+                                    {% endif %}
+
+                                    {% if property_address %}<b>Property Address:</b> {{ property_address }}<br>{% endif %}
+                                    {% if offer_amount %}<b>Purchase Price:</b> {{ offer_amount }}<br>{% endif %}
+                                    {% if closing_date %}<b>Closing Date:</b> {{ closing_date }}<br>{% endif %}
+                                    {% if offer_open_till %}<b>Offer Open Till:</b> {{ offer_open_till }}<br>{% endif %}
+
+                                    {% if initial_deposits %}
+                                      <br>
+                                      <table class="info">
+                                        <tr class="info">
+                                          <th class="info">Initial Deposit Amount:</th>
+                                          <th class="info">Initial Deposit Date:</th>
+                                        </tr >
+                                        {% for deposit in initial_deposits %}
+                                          <tr class="info">
+                                            <td class="info">{{ deposit.deposit_amount }}</td>
+                                            <td class="info">{{ deposit.deposit_date }}</td>
+                                          </tr>
+                                        {% endfor %}
+                                      </table>
+                                    {% endif %}
+
+                                    {% if conditions %}
+                                      <br>
+                                      <table class="info">
+                                        <tr class="info">
+                                          <th class="info">Condition:</th>
+                                          <th class="info">Condition Date:</th>
+                                        </tr >
+                                        {% for condition in conditions %}
+                                          <tr class="info">
+                                            <td class="info">{{ condition.name }}</td>
+                                            <td class="info">{{ condition.condition_date }}</td>
+                                          </tr>
+                                        {% endfor %}
+                                      </table>
+                                    {% endif %}
+
+                                    {% if additional_deposits %}
+                                      <br>
+                                      <table class="info">
+                                        <tr class="info">
+                                          <th class="info">Additional Deposit Amount:</th>
+                                          <th class="info">Additional Deposit Date:</th>
+                                        </tr>
+                                        {% for deposit in additional_deposits %}
+                                          <tr class="info">
+                                            <td class="info">{{ deposit.deposit_amount }}</td>
+                                            <td class="info">{{ deposit.deposit_date }}</td>
+                                          </tr>
+                                        {% endfor %}
+                                      </table>
+                                    {% endif %}
+
+                                    {% if additional_terms %}
+                                      <br>
+                                      <table class="info">
+                                        <tr class="info">
+                                          <th class="info">Additional Term:</th>
+                                        </tr>
+                                        {% for term in additional_terms %}
+                                          <tr class="info">
+                                            <td class="info">{{ term.name }}</td>
+                                          </tr>
+                                        {% endfor %}
+                                      </table>
+                                    {% endif %}
+
+                                    <br>
+                                    Click the button below to view the offer.
+                                  </p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center">
+                                  <a href="{{ offer_url }}" style="text-decoration: none;">
+                                    <table bgcolor="{{ColorScheme}}" style="margin:10px 0 25px 0;background-color:#FAC005;height:40px;width:280px;text-align:center;border-radius: 3px;" cellpadding="0" cellspacing="8">
+                                      <tr>
+                                        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                        <td>
+                                          <span style="color:#FFF;font:18px 'Roboto Condensed', Helvetica, Arial, Sans-serif#view_updated_link">
+                                            View Offer
+                                          </span>
+                                        </td>
+                                        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                      </tr>
+                                    </table>
+                                  </a>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
+{% endautoescape %}
